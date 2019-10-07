@@ -11,7 +11,7 @@ call clear-cache.bat
 
 echo Reinstalling packages...
 call composer install
-echo composer update complete!
+echo composer install complete!
 
 call migrate.bat
 call generate-snapshots.bat
