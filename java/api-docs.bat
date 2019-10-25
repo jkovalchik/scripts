@@ -18,6 +18,6 @@ if [%mode%]==[P] (set mode=production)
 if [%mode%]==[production] (
 	set username=webadmin
 )
-set arguments=-Dspring.datasource.username=%username% -Dspring.datasource.password=%password% -Dspring.cloud.config.label=%configBranch% -Dspring.profiles.active=%mode%
+set arguments=-Dspring.datasource.username=%username% -Dspring.datasource.password=%password% -Dspring.cloud.config.label=%configBranch% -Dspring.profiles.active=%mode% -Dapi.key=1234567
 
 call mvn %target% %arguments%
