@@ -1,3 +1,3 @@
 @echo off
 
-adb -d logcat CORDOVA_PLUGIN_OMNITRACS:I chromium:I *:S
+adb -d logcat CordovaPluginOmnitracs:* chromium:I *:S
