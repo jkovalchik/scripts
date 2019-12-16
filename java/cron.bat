@@ -10,7 +10,7 @@ set tempDir=%CATALINA_HOME%\temp\cron
 
 cd %projectDir%
 
-set target=prepare-package war:exploded
+set target=prepare-package
 set /p target="target: (%target%) "
 
 call set-env.bat
