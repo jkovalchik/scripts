@@ -10,10 +10,11 @@ set tempDir=%CATALINA_HOME%\temp\cron
 
 cd %projectDir%
 
-set target=prepare-package
+set target=clean prepare-package
 set /p target="target: (%target%) "
 
 call set-env.bat
+rm -r target/
 
 :: Build the maven project
 call mvn %target% -DskipTests -Dcatalina.base=%CATALINA_HOME%
