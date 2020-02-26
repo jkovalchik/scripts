@@ -8,7 +8,7 @@ set configBranch=develop
 
 set /p target="target: (spring-boot:run) "
 
-set /p mode="env: (development) "
+set /p mode="env: (%mode%) "
 if [%mode%]==[PROD] (set mode=production)
 if [%mode%]==[Prod] (set mode=production)
 if [%mode%]==[prod] (set mode=production)

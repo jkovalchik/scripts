@@ -16,7 +16,8 @@ set /p target="target: (%target%) "
 call set-env.bat
 
 :: Build the maven project
-call mvn %target% -DskipTests -Dcatalina.base=%CATALINA_HOME% -Djava.security.auth.login.config=%CATALINA_HOME%\temp\ops\jaas.conf
+set JAAS=-Djava.security.auth.login.config=%CATALINA_HOME%\temp\ops\jaas.conf
+call mvn %target% -DskipTests -Dcatalina.base=%CATALINA_HOME%
 
 :: Move generated files into src/main/webapp/WEB-INF
 call project-version.bat

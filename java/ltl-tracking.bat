@@ -20,4 +20,4 @@ if [%mode%]==[production] (
 )
 set arguments=-Dspring.datasource.username=%username% -Dspring.datasource.password=%password% -Dspring.cloud.config.label=%configBranch% -Dspring.profiles.active=%mode%
 
-call mvn %target% %arguments%
+call mvn %target% -Dspring-boot.run.jvmArguments="%arguments%"
